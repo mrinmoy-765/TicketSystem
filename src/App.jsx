@@ -1,5 +1,6 @@
 import "./App.css";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import ticketsData from "./data/tickets";
 import Banner from "./components/Banner";
@@ -22,7 +23,7 @@ function App() {
     }
 
     setInProgress([...inProgress, ticket]);
-    alert("Added to Task Status!");
+    toast.info("Added to Task Status!");
   };
 
   // Complete Task
@@ -31,7 +32,7 @@ function App() {
     setResolved([...resolved, ticket]);
     setTickets(tickets.filter((t) => t.id !== ticket.id));
 
-    alert("Task Completed!");
+    toast.success("Task Completed!");
   };
 
   return (
@@ -53,6 +54,7 @@ function App() {
         </div>
       </div>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

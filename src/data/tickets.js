@@ -32,7 +32,7 @@ const tickets = [
     description: "App crashes on launch on Android",
     customer: "Priya Patel",
     priority: "High Priority",
-    status: "closed",
+    status: "open",
     createdAt: "2026-05-25",
   },
   {
@@ -68,7 +68,7 @@ const tickets = [
     description: "Button overlaps text on mobile view",
     customer: "Sophia Lee",
     priority: "Medium Priority",
-    status: "closed",
+    status: "open",
     createdAt: "2026-05-28",
   },
   {
@@ -113,7 +113,7 @@ const tickets = [
     description: "Account locked after multiple failed logins",
     customer: "Ethan Hall",
     priority: "Medium Priority",
-    status: "closed",
+    status: "open",
     createdAt: "2026-05-30",
   },
   {

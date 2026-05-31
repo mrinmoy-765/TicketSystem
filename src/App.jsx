@@ -7,6 +7,7 @@ import TicketList from "./components/TicketList";
 import TaskStatus from "./components/TaskStatus";
 import ResolvedTask from "./components/ResolvedTask";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   const [tickets, setTickets] = useState(ticketsData);
@@ -41,7 +42,7 @@ function App() {
         resolvedCount={resolved.length}
       />
 
-      <div className="grid grid-cols-3 gap-4 mt-6 px-4 pb-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-6 px-4 pb-4">
         <div className="col-span-2">
           <TicketList tickets={tickets} onAdd={handleAddTask} />
         </div>
@@ -51,6 +52,7 @@ function App() {
           <ResolvedTask tasks={resolved} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

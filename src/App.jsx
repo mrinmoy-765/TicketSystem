@@ -33,7 +33,7 @@ function App() {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 bg-gray-50">
       <Banner
         inProgressCount={inProgress.length}
         resolvedCount={resolved.length}

@@ -5,6 +5,7 @@ const TicketCard = ({ ticket, onAdd }) => {
       <p>{ticket.description}</p>
       <p>Customer: {ticket.customer}</p>
       <p>Priority: {ticket.priority}</p>
+      <p>Status: {ticket.status}</p>
 
       <button
         onClick={() => onAdd(ticket)}

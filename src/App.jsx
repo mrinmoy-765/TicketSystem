@@ -5,6 +5,7 @@ import ticketsData from "./data/tickets";
 import Banner from "./components/Banner";
 import TicketList from "./components/TicketList";
 import TaskStatus from "./components/TaskStatus";
+import ResolvedTask from "./components/ResolvedTask";
 
 function App() {
   const [tickets, setTickets] = useState(ticketsData);
@@ -14,6 +15,9 @@ function App() {
   // Add to In Progress
   const handleAddTask = (ticket) => {
     if (inProgress.find((t) => t.id === ticket.id)) return;
+    else {
+      ticket.status = "In Progress";
+    }
 
     setInProgress([...inProgress, ticket]);
     alert("Added to Task Status!");
@@ -42,6 +46,7 @@ function App() {
 
         <div>
           <TaskStatus tasks={inProgress} onComplete={handleComplete} />
+          <ResolvedTask tasks={resolved} />
         </div>
       </div>
     </div>

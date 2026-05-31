@@ -6,6 +6,7 @@ import Banner from "./components/Banner";
 import TicketList from "./components/TicketList";
 import TaskStatus from "./components/TaskStatus";
 import ResolvedTask from "./components/ResolvedTask";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [tickets, setTickets] = useState(ticketsData);
@@ -33,13 +34,14 @@ function App() {
   };
 
   return (
-    <div className="p-4 bg-gray-50">
+    <div className=" bg-gray-50">
+      <Navbar />
       <Banner
         inProgressCount={inProgress.length}
         resolvedCount={resolved.length}
       />
 
-      <div className="grid grid-cols-3 gap-4 mt-6">
+      <div className="grid grid-cols-3 gap-4 mt-6 px-4 pb-4">
         <div className="col-span-2">
           <TicketList tickets={tickets} onAdd={handleAddTask} />
         </div>
